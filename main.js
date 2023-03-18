@@ -29,18 +29,16 @@ export function remember(key, value){
         })
     }
     else{
-        return Promise.resolve().then(() => {() => {
-            let toStore = value;
-            
-            if(Object(value) === value){
+        return Promise.resolve().then(() => {
+            let toStore = Object(value) === value ?
                 // this may throw if value is cyclic and that's okay, the error with go to the catch channel
-                toStore = JSON.stringify(value);
-            }
+                JSON.stringify(value) : 
+                value;
         
             // this may throw if storage is full and that's okay
             localStorage.setItem(key, toStore);
             return key;
-        }})
+        })
     }
 }
 
