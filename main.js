@@ -4,7 +4,7 @@
  * Promise-based wrapped around localStorage.get/setItem
  * 
  * @param {string} key 
- * @param {any?} value
+ * @param {any} [value]
  * @returns {Promise<any>}
  */
 export function remember(key, value){
@@ -37,7 +37,7 @@ export function remember(key, value){
         
             // this may throw if storage is full and that's okay
             localStorage.setItem(key, toStore);
-            return key;
+            return undefined;
         })
     }
 }

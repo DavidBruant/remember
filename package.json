@@ -4,6 +4,7 @@
   "description": "",
   "type": "module",
   "main": "main.js",
+  "types": "./types.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

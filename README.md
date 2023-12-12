@@ -6,7 +6,7 @@ A thin Promise-based wrapped around localStorage.get/setItem with a basic unders
 ## Install
 
 ```sh
-npm i https://github.com/DavidBruant/remember#v1.0.1
+npm i https://github.com/DavidBruant/remember#v1.0.2
 ```
 
 ## Usage
